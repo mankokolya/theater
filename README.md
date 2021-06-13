@@ -25,4 +25,5 @@ entities.___
 
 1. Download and install the [JDK]( https://www.oracle.com/ru/java/technologies/javase-downloads.html).
 2. (Optional) Download and install any IDE.
-3. Run the project.
+3. Remote MySQL database is already added.
+4. Run the project.
