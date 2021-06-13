@@ -1,5 +1,5 @@
+[![Build Status](https://travis-ci.com/mankokolya/theater.svg?branch=master)](https://travis-ci.com/mankokolya/theater)
 # Theater-tickets-app
-
 ----
 A prototype of an online store selling theater tickets with 
 basic functionality for user written in Java with Hibernate and MySQL as database.

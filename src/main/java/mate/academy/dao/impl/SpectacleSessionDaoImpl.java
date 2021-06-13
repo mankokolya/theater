@@ -34,7 +34,8 @@ public class SpectacleSessionDaoImpl implements SpectacleSessionDao {
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw new DataProcessingException("Can't insert spectacle session" + spectacleSession, e);
+            throw new DataProcessingException("Can't insert spectacle session"
+                    + spectacleSession, e);
         } finally {
             if (session != null) {
                 session.close();
@@ -49,7 +50,8 @@ public class SpectacleSessionDaoImpl implements SpectacleSessionDao {
             CriteriaQuery<SpectacleSession> criteriaQuery =
                     criteriaBuilder.createQuery(SpectacleSession.class);
             Root<SpectacleSession> root = criteriaQuery.from(SpectacleSession.class);
-            Predicate spectaclePredicate = criteriaBuilder.equal(root.get("spectacle"), spectacleId);
+            Predicate spectaclePredicate =
+                    criteriaBuilder.equal(root.get("spectacle"), spectacleId);
             Predicate datePredicate = criteriaBuilder.between(root.get("showTime"),
                     date.atStartOfDay(), date.atTime(END_OF_DAY));
             Predicate allConditions = criteriaBuilder.and(spectaclePredicate, datePredicate);
